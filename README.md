@@ -1,5 +1,6 @@
 # make a todo list!
 
-incomplete project... javascript for fireworks needs updating to work in html5
+_work in progress_
+This is a very light weight client side app for making todo lists with a checkbox system. Hack it into whatever you want :) currently the two .js files are dependent on each other to work fully... fireworks on the completion of the list. 
 
-This is a very light weight client side app for making todo lists with a checkbox system. Hack it into whatever you want :)
+I am reminded of theme park on the old sega megadrive for some reason.
