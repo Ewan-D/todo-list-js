@@ -23,6 +23,7 @@
 	        }
 		if(done == todoList.length){
 			allDone();
+            startFw();
 		}
       };
 
@@ -48,7 +49,6 @@
         }
 
     let finished = () =>{
-        console.log('now you are here')
         let clearList = document.getElementById("todoList");
         while(clearList.firstChild){
             clearList.removeChild(clearList.lastChild);
