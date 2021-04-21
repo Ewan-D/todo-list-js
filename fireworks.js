@@ -5,10 +5,13 @@
   */
 
 
-/* this has been updated to use in html5 by ewan-d */
+/* this has been updated for use in html5 by ewan-d */
 
-var theObj = '<p style="font-size:2em; color:#00FF00"><B>.</B></p>';
-var numObj = 40, _dl = document.getElementById('sf"+i+"'), sparks = new Array();
+let getNum = () => Math.floor(Math.random() * 7);
+let colors = ['red', 'orange', 'yellow', 'green', 'blue', 'indigo', 'violet', 'white'];
+
+var theObj = `<p style="font-size:0.75em; "><B>.</B></p>`;
+var numObj = 42, _dl = document.getElementById('sf"+i+"'), sparks = new Array();
 
 mx = function(){ return window.pageXOffset ? window.pageXOffset : document.body.scrollLeft; };
 my = function(){ return window.pageYOffset ? window.pageYOffset : document.body.scrollTop; };
@@ -29,6 +32,7 @@ function ani(){
 
 function reset()
 {
+    let color = colors[getNum()];
     var fwX = mx() + 100 + Math.random() * (cx-200), fwY = my() + 100 + Math.random() * (cy-200);
     for(var i=0 ;i<numObj;i++){
         var el=sparks[i]= document.getElementById("sf"+i) ;
@@ -38,16 +42,15 @@ function reset()
         el.x  = fwX;
         el.y  = fwY;
         _dl ? el.style = el : null;
+        el.style.color = color;
     }
 };
-
 
 function startFw(){
     reset();
     t1 = setInterval("ani()", 40);
     t2 = setInterval("reset()", 2000);
 }
-
 
 function stopFw()
 {
