@@ -9,7 +9,8 @@
     });
 
  	let allDone = () => {
-		document.body.style.backgroundColor= 'black';
+		document.body.style.background= 'linear-gradient(to top, #003366 4%, #ff5050 5% , #ff99cc 6%, #000066 25%, #000 55%)';
+        document.body.style.height = '100vh';
 		document.body.style.color= 'white';
 	};
 
@@ -53,6 +54,6 @@
         while(clearList.firstChild){
             clearList.removeChild(clearList.lastChild);
             }
-        document.body.style.backgroundColor= 'white';
+        document.body.style.background= 'white';
         document.body.style.color= 'black';
         }

@@ -7,8 +7,8 @@
 
 /* this has been updated for use in html5 by ewan-d */
 
-let getNum = () => Math.floor(Math.random() * 7);
-let colors = ['red', 'orange', 'yellow', 'green', 'blue', 'indigo', 'violet', 'white'];
+let getNum = () => Math.floor(Math.random() * 6);
+let colors = ['#ff6699', '#ffcc99', '#ffff66', '#ccffcc', '#00ffff', '#ff66ff', '#ffffff'];
 
 var theObj = `<p style="font-size:0.75em; "><B>.</B></p>`;
 var numObj = 42, _dl = document.getElementById('sf"+i+"'), sparks = new Array();
