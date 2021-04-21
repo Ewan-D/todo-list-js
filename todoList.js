@@ -53,6 +53,7 @@
         }
 
     let finished = () =>{
+        listCount = 0;
         let clearList = document.getElementById("todoList");
         while(clearList.firstChild){
             clearList.removeChild(clearList.lastChild);
