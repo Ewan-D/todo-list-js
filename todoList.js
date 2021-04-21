@@ -18,7 +18,7 @@
 
     let done = 0;
 	 for(let i=0; i < todoList.length ; i++){
-		 if(todoList[i].lastChild.checked){
+		 if(todoList[i].firstChild.checked){
 			 done++
 		     }
 	        }
@@ -35,7 +35,7 @@
 		let newTodo = document.createTextNode(document.getElementById("todoItem").value);
 			newEl.appendChild(newTodo);
 		let position = document.getElementById('todoList');
-			position.appendChild(newEl).insertAdjacentHTML('beforeend', `<input id="tickBox${listCount}" type="checkbox" />`);
+			position.appendChild(newEl).insertAdjacentHTML('afterbegin', `<input id="tickBox${listCount}" type="checkbox" />`);
 			todoList.push(newEl);
 
         watch();
