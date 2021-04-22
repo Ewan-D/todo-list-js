@@ -4,20 +4,35 @@
 		<meta charset="utf-8" />
 		<title>lets make a todo app</title>
 		<meta viewport="width=device-width, initial-scale=1" />
+        <link rel="stylesheet" type="text/css" href="style.css" />
 	</head>
 <body>
 
-	<h1>This is the todo list</h1>
 
-	<input id="todoItem" type="text" placeholder="add a todo item..." />
-	<input type="submit" value="add" onclick="addToList()" />
 
-	<ol id="todoList" labelledby="List">
-	</ol>
+<!-- from base11ty -->
 
-    <input type="submit" value="clear list" onclick="finished(); stopFw();return false" />
+<div class="container block mt-7 p-2">
 
-    <input type="submit" value="stop fireworks!" id="toggleFx" style="display:none;" onclick="stopFw();return false" />
+<input id="makeTodoList" class="startButton" type="submit" value="...its time to make a list!" onclick="startItemMaker()"/>
+
+<div id="itemMaker" style="display:none">
+    <div id="listContainer">
+        <h1>Todo list:</h1>
+
+        <ol id="todoList" class="pt-3" labelledby="List">
+        </ol>
+
+        <input id="todoItem" type="text" placeholder="add a todo item here..." />
+        <input id="addBtn" type="submit" value="add" onclick="addToList()" />
+        <input id="clearList" type="submit" value="clear list" style="display:none;" onclick="finished();" />
+
+    </div>
+</div>
+
+<input id="toggleFx" type="submit" value="Nice job! Click here to make another list..." style="display:none;" onclick="finished(); stopFw();return false" />
+
+</div>
 
     <script src='fireworks.js'></script>
     <script src='todoList.js'></script>
